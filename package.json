@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "tailwindcss": "^3.4.10"
+  }
+}
+
+{
+  "script":{
+  "name": "name",
+  "description": "description",
+  "authors": "author",
+  "version": "1.0.0",
+  "main": "pathToMain",
+  "dependencies": {}
+}
+}
+
+{"script":{
+  "build": "npx tailwindcss -i ./src/input.css -o ./src/glitchnet.css",
+  "watch": "npx tailwindcss -i ./src/input.css -o ./src/glitchnet.css --watch",
+}
+}
+

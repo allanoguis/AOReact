@@ -38,6 +38,16 @@
   display: inline-block;
   font-size: 16px;
 }
+.button2 {
+  background-color: #ff0000; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
 @keyframes App-logo-spin {
   from {

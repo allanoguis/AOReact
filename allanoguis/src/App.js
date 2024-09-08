@@ -3,15 +3,27 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  let [count, handleCount] = useState(0);
+  let [count2, handleCount2] = useState(0);
 
   function MyButton() {
-    function handleClick() {
-      setCount(count + 1);
+    function click() {
+      handleCount(count + 1);
     }
     return (
-      <button onClick={handleClick} className="button">
+      <button onClick={click} className="button">
         Click ME
+      </button>
+    );
+  }
+
+  function MyButton2() {
+    function click2() {
+      handleCount2(count2 + 1);
+    }
+    return (
+      <button onClick={click2} className="button2">
+        Clicked {count2} times
       </button>
     );
   }
@@ -22,7 +34,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello World</h1>
         <MyButton />
-        <h3>CLICKED TIMES {count}</h3>
+        <h2>CLICKED TIMES {count}</h2>
+        <MyButton2 />
       </header>
     </div>
   );

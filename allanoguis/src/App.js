@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./CSS/App.css";
+import "./App.css";
 import { useState } from "react";
 import Game from "./component/tictactoe";
 

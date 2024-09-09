@@ -1,10 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
+import Game from "./component/tictactoe";
 
 function App() {
   let [count, handleCount] = useState(0);
-  let [count2, handleCount2] = useState(0);
+  let [count2, setCount2] = useState(0);
 
   function MyButton() {
     function click() {
@@ -19,8 +20,9 @@ function App() {
 
   function MyButton2() {
     function click2() {
-      handleCount2(count2 + 1);
+      setCount2(count2 + 1);
     }
+
     return (
       <button onClick={click2} className="button2">
         Clicked {count2} times
@@ -36,6 +38,7 @@ function App() {
         <MyButton />
         <h2>CLICKED TIMES {count}</h2>
         <MyButton2 />
+        <Game />
       </header>
     </div>
   );

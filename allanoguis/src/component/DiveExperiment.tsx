@@ -8,7 +8,7 @@ const DiveExperiment: React.FC = () => {
     const handleClick = (): void => {
         if (typeof myAge === 'number') {
             if (myAge < 0) setResult('Call Doc. You are travelling back in time!');
-            else if (myAge == 0) setResult('Tell your mom and dad to make you');
+            else if (myAge === 0) setResult('Tell your mom and dad to make you');
             else if (myAge < 18) setResult('You shall not pass');
             else if (myAge < 100) setResult('You shall pass');
             else setResult('You are too old. Please touch grass');

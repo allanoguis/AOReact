@@ -65,22 +65,19 @@ Rebuilding my personal website using React.JS
 - [x] Comparison Operators
 - [x] Type Operators
 - [x] Math Operators && Random Numbers
-- [ ] IF statements
-- [ ] Checked && Unchecked
-- [ ] Switch statements
-- [ ] Ternary Operators
-- [ ] String Operators
-- [ ] String Methods
-- [ ] String Properties
-- [ ] String Concatenation
-- [ ] String Interpolation
-- [ ] String Template Literals
-- [ ] String Methods
-- [ ] String Properties
-- [ ] String Concatenation
-- [ ] String Interpolation
-- [ ] String Template Literals
-- [ ] Logical Operators
+- [x] IF statements
+- [x] Checked && Unchecked
+- [x] Switch statements
+- [x] Ternary Operators
+- [x] String Operators
+- [x] String Methods
+- [x] String Slicing
+- [x] String Properties
+- [x] String Concatenation
+- [x] String Interpolation
+- [x] String Template Literals
+- [x] Method Chaining
+- [x] Logical Operators
 - [ ] Loops
 - [ ] Functions
 - [ ] Arrays

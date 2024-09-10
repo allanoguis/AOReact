@@ -57,9 +57,9 @@ const DiveExperiment: React.FC = () => {
             <input 
                 className="input"
                 type="number" 
-                value={myAge} 
+                value={myAge.toString()} 
                 onChange={handleAgeChange}
-                onFocus={() => setMyAge('')}
+                onFocus={() => setMyAge(0)}
             />
             <button onClick={handleClick} className="button2">Submit</button>
             <p>Age: {myAge}</p>

@@ -17,6 +17,16 @@ const DiveExperiment: React.FC = () => {
                 throw new Error('Please enter a valid whole number for age');
             }
 
+            const over500Messages = [
+                'Dude you are bored. Go out and touch grass',
+                'Are you a time traveler?',
+                'You must have seen some things',
+                'Ancient one, share your wisdom',
+                'How many centuries have you seen?',
+                'You are probably.. Idk, immortal?',
+                `You're are a dragon aren't you?`
+            ];
+
             switch (true) {
                 case myAge < 0:
                     setResult('Call Doc. You are travelling back in time!');
@@ -25,10 +35,10 @@ const DiveExperiment: React.FC = () => {
                     setResult('Tell your mom and dad to make you');
                     break;
                 case myAge < 18:
-                    setResult('You shall not pass');
+                    setResult('"You shall not pass!" - Gandalf');
                     break;
                 case myAge < 100:
-                    setResult('You shall pass');
+                    setResult('Ok! You passed');
                     break;
                 case myAge < 200:
                     setResult('You have achieved wizard level');
@@ -40,7 +50,8 @@ const DiveExperiment: React.FC = () => {
                     setResult('You have achieved god level');
                     break;
                 case myAge >= 500:
-                    setResult('Dude you are bored. Go out and touch grass');
+                    const randomIndex = Math.floor(Math.random() * over500Messages.length);
+                    setResult(over500Messages[randomIndex]);
                     break;
                 default:
                     throw new Error('Unexpected age value');

@@ -28,7 +28,7 @@ const DiveExperiment: React.FC = () => {
                 `Aren't you going to die?`,
                 `I'm getting tired of this.`,
                 `Okay, you're done.`,
-                `Alight, stop`
+                `Alright, stop it. You're embarrassing me.`
             ];
 
             switch (true) {

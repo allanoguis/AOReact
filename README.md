@@ -56,3 +56,70 @@ Rebuilding my personal website using React.JS
 - [ ] Add a skills section
 - [ ] Add a education section
 - [ ] Add a experience section
+
+### Javascript Refresher
+
+- [x] Variables
+- [x] Arithmetic Operators
+- [x] Assignment Operators
+- [x] Comparison Operators
+- [x] Type Operators
+- [x] Math Operators && Random Numbers
+- [ ] IF statements
+- [ ] Checked && Unchecked
+- [ ] Switch statements
+- [ ] Ternary Operators
+- [ ] String Operators
+- [ ] String Methods
+- [ ] String Properties
+- [ ] String Concatenation
+- [ ] String Interpolation
+- [ ] String Template Literals
+- [ ] String Methods
+- [ ] String Properties
+- [ ] String Concatenation
+- [ ] String Interpolation
+- [ ] String Template Literals
+- [ ] Logical Operators
+- [ ] Loops
+- [ ] Functions
+- [ ] Arrays
+- [ ] Logical Operators
+- [ ] Spread Operators
+- [ ] Rest Parameters
+- [ ] Callbacks
+- [ ] For each ()
+- [ ] Map ()
+- [ ] Filter ()
+- [ ] Reduce ()
+- [ ] Functions
+- [ ] Arrow Functions
+- [ ] Objects
+- [ ] Constructors
+- [ ] Classes
+- [ ] Class List
+- [ ] Static Methods
+- [ ] Inheritance
+- [ ] Getters && Setters
+- [ ] Destructuring
+- [ ] Modules
+- [ ] ES6 Modules
+- [ ] Error Handling
+- [ ] Debugging
+- [ ] DOMs
+- [ ] DOM Navigation
+- [ ] DOM Manipulation
+- [ ] Element Selectors
+- [ ] Event Listeners
+- [ ] Event Handlers
+- [ ] Event Objects
+- [ ] Event Propagation
+- [ ] Event Delegation
+- [ ] Event Loop
+- [ ] Event Queue
+- [ ] Event Loop
+- [ ] Node List
+- [ ] Promises
+- [ ] Async/Await
+- [ ] JSON
+- [ ] Fetch API

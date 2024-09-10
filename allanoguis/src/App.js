@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./styles/App.css";
 import ButtonCount from "./component/ButtonCount.tsx";
+import DiveExperiment from "./component/DiveExperiment.tsx";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello World</h1>
         <ButtonCount />
+        <DiveExperiment />
       </header>
     </div>
   );

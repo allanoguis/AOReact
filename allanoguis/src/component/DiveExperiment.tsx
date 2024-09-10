@@ -24,7 +24,11 @@ const DiveExperiment: React.FC = () => {
                 'Ancient one, share your wisdom',
                 'How many centuries have you seen?',
                 'You are probably.. Idk, immortal?',
-                `You're are a dragon aren't you?`
+                `You're are a dragon aren't you?`,
+                `Aren't you going to die?`,
+                `I'm getting tired of this.`,
+                `Okay, you're done.`,
+                `Alight, stop`
             ];
 
             switch (true) {

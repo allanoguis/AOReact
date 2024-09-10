@@ -11,7 +11,10 @@ const DiveExperiment: React.FC = () => {
             else if (myAge === 0) setResult('Tell your mom and dad to make you');
             else if (myAge < 18) setResult('You shall not pass');
             else if (myAge < 100) setResult('You shall pass');
-            else setResult('You are too old. Please touch grass');
+            else if (myAge < 200) setResult('You have achieved wizard level');
+            else if (myAge < 300) setResult('You are probably an elf');
+            else if (myAge < 500) setResult('You have achieved god level');
+            else setResult('Dude you are bored. Go out and touch grass');
         } else {
             setResult('Please enter a valid age');
         }

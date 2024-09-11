@@ -25,18 +25,17 @@ Rebuilding my personal website using React.JS with some extras.
 - [x] Method Chaining
 - [x] Logical Operators
 - [x] Loops
-- [x] Functions
 - [x] Arrays
   - [x] Array Methods
   - [x] Spread Operators
   - [x] Rest Parameters
-  - [ ] For each ()
-  - [ ] Map ()
-  - [ ] Filter ()
-  - [ ] Reduce ()
-- [ ] Callbacks
-- [ ] Functions
-- [ ] Arrow Functions
+  - [x] For each ()
+  - [x] Map ()
+  - [x] Filter ()
+  - [x] Reduce ()
+- [x] Functions
+  - [x] Callbacks
+  - [x] Arrow Functions
 - [ ] Objects
 - [ ] Constructors
 - [ ] Classes

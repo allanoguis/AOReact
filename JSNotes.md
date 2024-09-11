@@ -1,5 +1,77 @@
 # **JavaScript Notes**
 
+## Variables
+
+### Declaration
+
+| Keyword | Description |
+|:--------|:------------|
+| `var`   | Function-scoped or globally-scoped variable, can be redeclared and updated |
+| `let`   | Block-scoped variable, can be updated but not redeclared |
+| `const` | Block-scoped variable, cannot be updated or redeclared |
+
+### Scope
+
+| Scope Type | Description |
+|:-----------|:------------|
+| Global     | Variables declared outside any function or block, accessible everywhere |
+| Function   | Variables declared within a function, accessible only within that function |
+| Block      | Variables declared inside a block (e.g., if statements, loops), accessible only within that block (for `let` and `const`) |
+
+### Hoisting
+
+| Behavior | Description |
+|:---------|:------------|
+| `var`    | Hoisted to the top of its scope and initialized with `undefined` |
+| `let`    | Hoisted to the top of its block but not initialized (Temporal Dead Zone) |
+| `const`  | Hoisted to the top of its block but not initialized (Temporal Dead Zone) |
+
+### Data Types
+
+| Type      | Description | Example |
+|:----------|:------------|:--------|
+| Number    | Numeric data type | `let age = 25;` |
+| String    | Textual data type | `let name = "John";` |
+| Boolean   | Logical data type | `let isStudent = true;` |
+| Undefined | Variable declared but not assigned a value | `let x;` |
+| Null      | Intentional absence of any object value | `let empty = null;` |
+| Symbol    | Unique identifier | `let id = Symbol('id');` |
+| BigInt    | Integer values larger than 2^53 - 1 | `let bigNumber = 1234567890123456789012345678901234567890n;` |
+
+### Objects and Arrays
+
+| Type   | Description | Example |
+|:-------|:------------|:--------|
+| Object | Collection of key-value pairs | `let person = {name: "Alice", age: 30};` |
+| Array  | Ordered list of values | `let colors = ["red", "green", "blue"];` |
+
+### Type Coercion
+
+| Operation | Description | Example |
+|:----------|:------------|:--------|
+| Implicit  | Automatic type conversion | `"5" + 3` results in `"53"` |
+| Explicit  | Manual type conversion | `Number("5")` results in `5` |
+
+### Variable Naming Conventions
+
+| Convention | Description | Example |
+|:-----------|:------------|:--------|
+| camelCase  | First word lowercase, subsequent words capitalized | `let firstName = "John";` |
+| PascalCase | Each word capitalized (typically used for classes) | `class Person {}` |
+| snake_case | Words separated by underscores | `let user_age = 25;` |
+| UPPERCASE  | All capital letters (typically used for constants) | `const MAX_SIZE = 100;` |
+
+### Best Practices
+
+- Use `const` by default, and only use `let` if rebinding is needed.
+- Avoid using `var` in modern JavaScript.
+- Choose meaningful and descriptive variable names.
+- Use camelCase for variable and function names.
+- Use PascalCase for class names.
+- Use UPPERCASE for constants.
+- Declare variables at the top of their scope.
+- Avoid global variables when possible.
+
 ## Arrays
 
 ### Mutator Methods
@@ -130,3 +202,75 @@
 |:---              |:---                                                                                           |
 | `JSON.parse()`   | Parses a JSON string, constructing the JavaScript value or object described by the string     |
 | `JSON.stringify()`| Converts a JavaScript object or value to a JSON string                                       |
+
+## Variables
+
+### Declaration
+
+| Keyword | Description |
+|:--------|:------------|
+| `var`   | Function-scoped or globally-scoped variable, can be redeclared and updated |
+| `let`   | Block-scoped variable, can be updated but not redeclared |
+| `const` | Block-scoped variable, cannot be updated or redeclared |
+
+### Scope
+
+| Scope Type | Description |
+|:-----------|:------------|
+| Global     | Variables declared outside any function or block, accessible everywhere |
+| Function   | Variables declared within a function, accessible only within that function |
+| Block      | Variables declared inside a block (e.g., if statements, loops), accessible only within that block (for `let` and `const`) |
+
+### Hoisting
+
+| Behavior | Description |
+|:---------|:------------|
+| `var`    | Hoisted to the top of its scope and initialized with `undefined` |
+| `let`    | Hoisted to the top of its block but not initialized (Temporal Dead Zone) |
+| `const`  | Hoisted to the top of its block but not initialized (Temporal Dead Zone) |
+
+### Data Types
+
+| Type      | Description | Example |
+|:----------|:------------|:--------|
+| Number    | Numeric data type | `let age = 25;` |
+| String    | Textual data type | `let name = "John";` |
+| Boolean   | Logical data type | `let isStudent = true;` |
+| Undefined | Variable declared but not assigned a value | `let x;` |
+| Null      | Intentional absence of any object value | `let empty = null;` |
+| Symbol    | Unique identifier | `let id = Symbol('id');` |
+| BigInt    | Integer values larger than 2^53 - 1 | `let bigNumber = 1234567890123456789012345678901234567890n;` |
+
+### Objects and Arrays
+
+| Type   | Description | Example |
+|:-------|:------------|:--------|
+| Object | Collection of key-value pairs | `let person = {name: "Alice", age: 30};` |
+| Array  | Ordered list of values | `let colors = ["red", "green", "blue"];` |
+
+### Type Coercion
+
+| Operation | Description | Example |
+|:----------|:------------|:--------|
+| Implicit  | Automatic type conversion | `"5" + 3` results in `"53"` |
+| Explicit  | Manual type conversion | `Number("5")` results in `5` |
+
+### Variable Naming Conventions
+
+| Convention | Description | Example |
+|:-----------|:------------|:--------|
+| camelCase  | First word lowercase, subsequent words capitalized | `let firstName = "John";` |
+| PascalCase | Each word capitalized (typically used for classes) | `class Person {}` |
+| snake_case | Words separated by underscores | `let user_age = 25;` |
+| UPPERCASE  | All capital letters (typically used for constants) | `const MAX_SIZE = 100;` |
+
+### Best Practices
+
+- Use `const` by default, and only use `let` if rebinding is needed.
+- Avoid using `var` in modern JavaScript.
+- Choose meaningful and descriptive variable names.
+- Use camelCase for variable and function names.
+- Use PascalCase for class names.
+- Use UPPERCASE for constants.
+- Declare variables at the top of their scope.
+- Avoid global variables when possible.

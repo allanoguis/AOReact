@@ -61,17 +61,16 @@
 | snake_case | Words separated by underscores | `let user_age = 25;` |
 | UPPERCASE  | All capital letters (typically used for constants) | `const MAX_SIZE = 100;` |
 
-[!TIP]
-### Best Practices
-
-- Use `const` by default, and only use `let` if rebinding is needed.
-- Avoid using `var` in modern JavaScript.
-- Choose meaningful and descriptive variable names.
-- Use camelCase for variable and function names.
-- Use PascalCase for class names.
-- Use UPPERCASE for constants.
-- Declare variables at the top of their scope.
-- Avoid global variables when possible.
+> [!TIP]
+>
+> - Use `const` by default, and only use `let` if rebinding is needed.
+> - Avoid using `var` in modern JavaScript.
+> - Choose meaningful and descriptive variable names.
+> - Use camelCase for variable and function names.
+> - Use PascalCase for class names.
+> - Use UPPERCASE for constants.
+> - Declare variables at the top of their scope.
+> - Avoid global variables when possible.
 
 ## Arrays
 
@@ -146,8 +145,18 @@
 | Method | Description | Example |
 |:-------|:------------|:--------|
 | Object literal | Create an object using curly braces | `let person = {name: "Alice", age: 30};` |
-| Constructor function | Create an object using a function | `function Person(name, age) { this.name = name; this.age = age; }` <br> `let person = new Person("Alice", 30);` |
-| Object.create() | Create an object with a specified prototype | `let personProto = {greet() { console.log("Hello!"); }}` <br> `let person = Object.create(personProto);` |
+
+| Constructor function | Create an object using a function |
+
+`function Person(name, age) { this.name = name; this.age = age; }`
+`let person = new Person("Alice", 30);` |
+
+| Object.create() | Create an object with a specified prototype |
+
+```
+`let personProto = {greet() { console.log("Hello!"); }}`
+`let person = Object.create(personProto);`
+```
 
 ### Accessing Object Properties
 
@@ -175,13 +184,12 @@
 | Constructor prototype | Add methods to all instances of a constructor |
 | Class syntax | ES6 introduced class syntax as syntactic sugar over prototypes |
 
-[!TIP]
-### Best Practices
-
-- Use object literals for simple structures and classes for complex ones with methods.
-- Avoid modifying built-in object prototypes.
-- Use Object.create(null) for dictionary-style objects without prototypes.
-- Use const when declaring object variables to prevent reassignment 
+> [!TIP]
+>
+> - Use object literals for simple structures and classes for complex ones with methods.
+> - Avoid modifying built-in object prototypes.
+> - Use Object.create(null) for dictionary-style objects without prototypes.
+> - Use const when declaring object variables to prevent reassignment 
 
 [!Note]
 the object's properties can still be modified.
@@ -235,13 +243,12 @@ Arrow functions provide a concise syntax for writing function expressions.
 | Array methods | Clean syntax for methods like `map`, `filter`, and `reduce` |
 | Short, single-expression functions | Implicit return for brief functions |
 
-[!TIP]
-### Best Practices
-
-- Use arrow functions for short, simple functions, especially callbacks.
-- Avoid arrow functions for object methods that need to access `this`.
-- Use traditional function syntax for complex functions or those that use `this` dynamically.
-- Be aware that arrow functions are always anonymous, but can be assigned to variables if needed.
+>[!TIP]
+>
+> - Use arrow functions for short, simple functions, especially callbacks.
+> - Avoid arrow functions for object methods that need to access `this`.
+> - Use traditional function syntax for complex functions or those that use `this` dynamically.
+> - Be aware that arrow functions are always anonymous, but can be assigned to variables if needed.
 
 ## Timing and Asynchronous Operations
 
@@ -304,15 +311,29 @@ The `.map()` method creates a new array with the results of calling a provided f
 
 | Example | Description |
 |:--------|:------------|
-| Basic usage | `const numbers = [1, 2, 3, 4];` <br> `const doubled = numbers.map(num => num * 2);` <br> `// doubled is [2, 4, 6, 8]` |
-| With index | `const indexed = numbers.map((num, index) => ({ value: num, index: index }));` <br> `// indexed is [{ value: 1, index: 0 }, { value: 2, index: 1 }, ...]` |
-| Transforming objects | `const persons = [{ name: 'John' }, { name: 'Jane' }];` <br> `const names = persons.map(person => person.name);` <br> `// names is ['John', 'Jane']` |
+| Basic usage |
 
-[!TIP]
+```
+`const numbers = [1, 2, 3, 4];` 
+`const doubled = numbers.map(num => num * 2);`
+`// doubled is [2, 4, 6, 8]` |
+| With index | `const indexed = numbers.map((num, index) => ({ value: num, index: index }));`
+`// indexed is [{ value: 1, index: 0 }, { value: 2, index: 1 }, ...]`
+```
+
+| Transforming objects |
+
+```
+`const persons = [{ name: 'John' }, { name: 'Jane' }];`
+`const names = persons.map(person => person.name);`
+`// names is ['John', 'Jane']` |
+```
+
 #### Best Practices
 
-- Use `.map()` when you want to transform each element in an array.
-- Always return a value from the callback function.
-- Avoid modifying the original array or performing side effects in the callback.
-- Consider using `.map()` with arrow functions for more concise syntax.
-- Consider using `.map()` with arrow functions for more concise syntax.
+> [!TIP]
+>
+> - Use `.map()` when you want to transform each element in an array.
+> - Always return a value from the callback function.
+> - Avoid modifying the original array or performing side effects in the callback.
+> - Consider using `.map()` with arrow functions for more concise syntax.

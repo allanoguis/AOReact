@@ -1,8 +1,8 @@
-# AOReact
+# **AOReact**
 
-Rebuilding my personal website using React.JS
+Rebuilding my personal website using React.JS with some extras.
 
-# Javascript Refresher
+## Javascript Refresher
 
 - [x] Variables
 - [x] Arithmetic Operators
@@ -14,26 +14,27 @@ Rebuilding my personal website using React.JS
 - [x] Checked && Unchecked
 - [x] Switch statements
 - [x] Ternary Operators
-- [x] String Operators
-- [x] String Methods
-- [x] String Slicing
-- [x] String Properties
-- [x] String Concatenation
-- [x] String Interpolation
-- [x] String Template Literals
+- [x] Strings
+  - [x] String Operators
+  - [x] String Methods
+  - [x] String Slicing
+  - [x] String Properties
+  - [x] String Concatenation
+  - [x] String Interpolation
+  - [x] String Template Literals
 - [x] Method Chaining
 - [x] Logical Operators
 - [x] Loops
 - [x] Functions
-- [ ] Arrays
-- [ ] Logical Operators
-- [ ] Spread Operators
-- [ ] Rest Parameters
+- [x] Arrays
+  - [x] Array Methods
+  - [x] Spread Operators
+  - [x] Rest Parameters
+  - [ ] For each ()
+  - [ ] Map ()
+  - [ ] Filter ()
+  - [ ] Reduce ()
 - [ ] Callbacks
-- [ ] For each ()
-- [ ] Map ()
-- [ ] Filter ()
-- [ ] Reduce ()
 - [ ] Functions
 - [ ] Arrow Functions
 - [ ] Objects
@@ -66,7 +67,7 @@ Rebuilding my personal website using React.JS
 - [ ] JSON
 - [ ] Fetch Data from API
 
-## Learn React
+### Learn React
 
 - [ ] Learn React
 - [ ] Learn React Hooks
@@ -77,7 +78,7 @@ Rebuilding my personal website using React.JS
 - [ ] Learn React Performance
 - [ ] Learn React Best Practices
 
-## Learn Best Practices
+### Learn Best Practices
 
 - [ ] Component Composition
 - [ ] Component State
@@ -89,7 +90,7 @@ Rebuilding my personal website using React.JS
 - [ ] Component Ref
 - [ ] Component Memo
 
-## Explore React Frameworks
+### Explore React Frameworks
 
 - [ ] Explore React Frameworks
 - [ ] Explore React Native
@@ -99,13 +100,19 @@ Rebuilding my personal website using React.JS
 - [ ] Explore React VR
 - [ ] Explore React Native Web
 
-### Build Projects
+#### Build Projects
 
 - [ ] Build a personal website
 - [ ] Build a portfolio website
-- [ ] Build a contact website
 - [ ] Build a resume website
-- [ ] Build a project website
-- [ ] Build a skills website
-- [ ] Build a education website
-- [ ] Build a experience website
+
+#### Build Apps
+
+- [ ] Build a todo app
+- [ ] Build a blog app
+- [ ] Build a ecommerce app
+- [ ] Build a weather app
+- [ ] Build a news app
+- [ ] Build a recipe app
+- [ ] Build a social media app
+- [ ] Build a chat app

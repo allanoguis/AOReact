@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./styles/App.css";
 import ButtonCount from "./modules/ButtonCount.tsx";
-import AgeHook from "./modules/AgeHook.tsx";
+import AgeHook from "./modules/R18Gatekeeper.tsx";
 
 function App() {
   return (

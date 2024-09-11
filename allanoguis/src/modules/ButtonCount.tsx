@@ -5,7 +5,9 @@ const ButtonCount: React.FC = () => {
   let [count, setCount] = useState<number>(0);
   let [colors, setColors] = useState<[string, string]>(['orange', 'red']);
 
-  let generateColor = () => `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+  let generateColor = () => `rgb(${Math.floor(Math.random() * 256)}, 
+                                 ${Math.floor(Math.random() * 256)}, 
+                                 ${Math.floor(Math.random() * 256)})`;
 
   let handleClick = (): void => {
     setCount(prevCount => prevCount + 1);
@@ -25,7 +27,7 @@ const ButtonCount: React.FC = () => {
       <h2>CLICKED TIMES {count}</h2>
       {/* <h4>COLOR {colors[0]}</h4>
       <h4>COLOR {colors[1]}</h4> */}
-    </Fragment>
+      </Fragment>
   );
 }
 

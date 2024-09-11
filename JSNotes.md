@@ -1,6 +1,6 @@
-# **Javascript Notes**
+# **JavaScript Notes**
 
-## Array Methods
+## Arrays
 
 ### Mutator Methods
 
@@ -11,7 +11,6 @@
 | `.shift()`  | Removes the first element from an array  |
 | `.unshift()`| Adds elements to the beginning of an array   |
 | `.splice()` | Adds/Removes elements from an array  |
-| `.slice()`  | Returns a shallow copy of a portion of an array  |
 
 ### Accessor Methods
 
@@ -26,8 +25,17 @@
 | `.find()`      | Returns the value of the first element in an array that satisfies a provided testing function    |
 | `.findIndex()` | Returns the index of the first element in an array that satisfies a provided testing function    |
 
-### Other Useful Methods
+### Iteration Methods
+| Method       | Description                                                                                       |
+|:---          |:---                                                                                               |
+| `.forEach()` | Executes a function for each array element                                                        |
+| `.map()`     | Creates a new array with the results of calling a function for every array element                |
+| `.filter()`  | Creates a new array with all elements that pass the test implemented by the provided function     |
+| `.reduce()`  | Reduces the array to a single value                                                               |
+| `.some()`    | Tests whether at least one element in the array passes the test implemented by the provided function |
+| `.every()`   | Tests whether all elements in the array pass the test implemented by the provided function        |
 
+### Other Array Methods
 | Method           | Description    |
 |:---              |:---    |
 | `Array.isArray()`| Determines whether the passed value is an array    |
@@ -40,44 +48,85 @@
 | `.entries()`     | Returns a new Array Iterator object that contains the key/value pairs for each index in the array  |
 | `.keys()`        | Returns a new Array Iterator object that contains the keys for each index in the array |
 | `.values()`      | Returns a new Array Iterator object that contains the values for each index in the array   |
+| `.sort()`        | Sorts the elements of an array in place and returns the sorted array                              |
+| `.reverse()`     | Reverses the order of the elements in an array in place                                           |
 
-### Reducer Methods
+## Strings
 
-| Method     | Description  |
-|:---        |:---  |
-| `.reduce()`| Executes a reducer function on each element of the array, resulting in a single output value |
+### String Methods
 
-#### `.reduce()` Explained
+| Method        | Description                                                                |
+|:---           |:---                                                                        |
+| `.split()`    | Splits a string into an array of substrings                                |
+| `.join()`     | Joins all elements of an array into a string                               |
+| `.slice()`    | Extracts a section of a string and returns it as a new string              |
+| `.substring()`| Returns the part of the string between the start and end indexes           |
+| `.toLowerCase()`| Converts a string to lowercase letters                                   |
+| `.toUpperCase()`| Converts a string to uppercase letters                                   |
+| `.trim()`     | Removes whitespace from both ends of a string                              |
+| `.replace()`  | Replaces a specified value with another value in a string                  |
 
-- **Purpose**: Reduces an array to a single value.
-- **Syntax**: `array.reduce(callback(accumulator, currentValue, index, array), initialValue)`
+## Objects
 
-- **Key Components**:
-  1. `callback`: Function called on each array element
-  2. `accumulator`: Stores the accumulated result
-  3. `currentValue`: Current element being processed
-  4. `index`: Index of the current element (optional)
-  5. `array`: The original array (optional)
-  6. `initialValue`: Starting value for the accumulator (optional, but recommended)
+### Object Methods
 
-- **Process**:
-  1. Executes the callback function for each array element
-  2. Passes the result to the next iteration as the accumulator
-  3. Returns the final accumulated value
+| Method           | Description                                                                                   |
+|:---              |:---                                                                                           |
+| `Object.keys()`  | Returns an array of a given object's own enumerable property names                            |
+| `Object.values()`| Returns an array of a given object's own enumerable property values                           |
+| `Object.entries()`| Returns an array of a given object's own enumerable string-keyed property [key, value] pairs |
+| `Object.assign()`| Copies the values of all enumerable own properties from one or more source objects to a target object |
 
-- **Example** (Sum of numbers):
-  ```javascript
-  const numbers = [1, 2, 3, 4];
-  const sum = numbers.reduce((acc, curr) => acc + curr, 0);
-  console.log(sum); // Output: 10
-  ```
+## Math and Numbers
 
-- **Use Cases**:
-  - Summing numbers
-  - Flattening arrays
-  - Grouping objects
-  - Counting occurrences
+### Math Functions
 
-- **Tip**: Always provide an initialValue to avoid unexpected behavior with empty arrays.
+| Function      | Description                                                               |
+|:---           |:---                                                                       |
+| `Math.random()`| Returns a random number between 0 and 1                                  |
+| `Math.floor()` | Returns the largest integer less than or equal to a given number         |
+| `Math.ceil()`  | Returns the smallest integer greater than or equal to a given number     |
+| `Math.round()` | Returns the value of a number rounded to the nearest integer             |
 
-# Functions
+### Other Math Functions
+
+| Function         | Description                                                                                   |
+|:---              |:---                                                                                           |
+| `parseInt()`     | Parses a string argument and returns an integer of the specified radix                        |
+| `parseFloat()`   | Parses a string argument and returns a floating point number                                  |
+| `isNaN()`        | Determines whether a value is NaN or not                                                      |
+
+## Timing and Asynchronous Operations
+
+### Timing Functions
+
+| Function        | Description                                                                                     |
+|:---             |:---                                                                                             |
+| `setTimeout()`  | Calls a function or evaluates an expression after a specified number of milliseconds            |
+| `setInterval()` | Calls a function or evaluates an expression at specified intervals (in milliseconds)            |
+| `clearTimeout()`| Cancels a timeout previously established by setTimeout()                                        |
+| `clearInterval()`| Cancels a timed, repeating action which was previously established by setInterval()            |
+
+### Promises and Async
+
+| Function/Syntax | Description                                                                                     |
+|:---             |:---                                                                                             |
+| `Promise.all()` | Takes an iterable of promises as an input, and returns a single Promise                         |
+| `Promise.race()`| Returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects |
+| `async/await`   | Syntactic sugar for working with promises                                                       |
+
+## DOM Manipulation
+
+| Function                    | Description                                                                         |
+|:---                         |:---                                                                                 |
+| `document.getElementById()` | Returns the element that has the ID attribute with the specified value              |
+| `document.querySelector()`  | Returns the first element that matches a specified CSS selector(s) in the document  |
+| `document.querySelectorAll()`| Returns a static NodeList containing all elements that match the specified CSS selector(s) |
+| `element.addEventListener()`| Attaches an event handler to the specified element                                  |
+
+## JSON Handling
+
+| Function         | Description                                                                                   |
+|:---              |:---                                                                                           |
+| `JSON.parse()`   | Parses a JSON string, constructing the JavaScript value or object described by the string     |
+| `JSON.stringify()`| Converts a JavaScript object or value to a JSON string                                       |

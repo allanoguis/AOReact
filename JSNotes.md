@@ -61,6 +61,7 @@
 | snake_case | Words separated by underscores | `let user_age = 25;` |
 | UPPERCASE  | All capital letters (typically used for constants) | `const MAX_SIZE = 100;` |
 
+[!TIP]
 ### Best Practices
 
 - Use `const` by default, and only use `let` if rebinding is needed.
@@ -159,12 +160,12 @@
 
 | Method | Description |
 |:-------|:------------|
-| Object.keys() | Returns an array of a given object's own enumerable property names |
-| Object.values() | Returns an array of a given object's own enumerable property values |
-| Object.entries() | Returns an array of a given object's own enumerable string-keyed property [key, value] pairs |
-| Object.assign() | Copies the values of all enumerable own properties from one or more source objects to a target object |
-| Object.freeze() | Freezes an object: prevents new properties from being added and existing properties from being removed or modified |
-| Object.seal() | Seals an object: prevents new properties from being added and marks all existing properties as non-configurable |
+| `Object.keys()` | Returns an array of a given object's own enumerable property names |
+| `Object.values()` | Returns an array of a given object's own enumerable property values |
+| `Object.entries()` | Returns an array of a given object's own enumerable string-keyed property [key, value] pairs |
+| `Object.assign()` | Copies the values of all enumerable own properties from one or more source objects to a target object |
+| `Object.freeze()` | Freezes an object: prevents new properties from being added and existing properties from being removed or modified |
+| `Object.seal()` | Seals an object: prevents new properties from being added and marks all existing properties as non-configurable |
 
 ### Prototypes and Inheritance
 
@@ -174,12 +175,16 @@
 | Constructor prototype | Add methods to all instances of a constructor |
 | Class syntax | ES6 introduced class syntax as syntactic sugar over prototypes |
 
+[!TIP]
 ### Best Practices
 
 - Use object literals for simple structures and classes for complex ones with methods.
 - Avoid modifying built-in object prototypes.
 - Use Object.create(null) for dictionary-style objects without prototypes.
-- Use const when declaring object variables to prevent reassignment (note: the object's properties can still be modified).
+- Use const when declaring object variables to prevent reassignment 
+
+[!Note]
+the object's properties can still be modified.
 
 ## Math and Numbers
 
@@ -199,6 +204,44 @@
 | `parseInt()`     | Parses a string argument and returns an integer of the specified radix                        |
 | `parseFloat()`   | Parses a string argument and returns a floating point number                                  |
 | `isNaN()`        | Determines whether a value is NaN or not                                                      |
+
+## Arrow Functions
+
+Arrow functions provide a concise syntax for writing function expressions.
+
+### Syntax
+
+| Syntax | Description | Example |
+|:-------|:------------|:--------|
+| `() => {}` | Basic arrow function | `const greet = () => { console.log("Hello!"); }` |
+| `param => {}` | Single parameter (parentheses optional) | `const square = x => { return x * x; }` |
+| `(param1, param2) => {}` | Multiple parameters | `const add = (a, b) => { return a + b; }` |
+| `() => expression` | Implicit return for single expressions | `const double = x => x * 2;` |
+
+### Key Characteristics
+
+| Feature | Description |
+|:--------|:------------|
+| Lexical `this` | Arrow functions do not bind their own `this`, instead inheriting it from the enclosing scope |
+| No `arguments` object | Arrow functions do not have their own `arguments` object |
+| Cannot be used as constructors | Arrow functions cannot be used with the `new` keyword |
+| No `prototype` property | Arrow functions do not have a `prototype` property |
+
+### Use Cases
+
+| Scenario | Description |
+|:---------|:------------|
+| Callbacks | Concise syntax for short callback functions |
+| Array methods | Clean syntax for methods like `map`, `filter`, and `reduce` |
+| Short, single-expression functions | Implicit return for brief functions |
+
+[!TIP]
+### Best Practices
+
+- Use arrow functions for short, simple functions, especially callbacks.
+- Avoid arrow functions for object methods that need to access `this`.
+- Use traditional function syntax for complex functions or those that use `this` dynamically.
+- Be aware that arrow functions are always anonymous, but can be assigned to variables if needed.
 
 ## Timing and Asynchronous Operations
 
@@ -234,3 +277,42 @@
 |:---              |:---                                                                                           |
 | `JSON.parse()`   | Parses a JSON string, constructing the JavaScript value or object described by the string     |
 | `JSON.stringify()`| Converts a JavaScript object or value to a JSON string                                       |
+
+## Array Methods
+
+### .map()
+
+The `.map()` method creates a new array with the results of calling a provided function on every element in the calling array.
+
+| Aspect | Description |
+|:-------|:------------|
+| Syntax | `array.map(callback(currentValue[, index[, array]])[, thisArg])` |
+| Return value | A new array with each element being the result of the callback function |
+| Mutates original array? | No |
+
+#### Parameters
+
+| Parameter | Description |
+|:----------|:------------|
+| `callback` | Function that produces an element of the new array |
+| `currentValue` | The current element being processed in the array |
+| `index` (optional) | The index of the current element being processed in the array |
+| `array` (optional) | The array `map` was called upon |
+| `thisArg` (optional) | Value to use as `this` when executing callback |
+
+#### Example Usage
+
+| Example | Description |
+|:--------|:------------|
+| Basic usage | `const numbers = [1, 2, 3, 4];` <br> `const doubled = numbers.map(num => num * 2);` <br> `// doubled is [2, 4, 6, 8]` |
+| With index | `const indexed = numbers.map((num, index) => ({ value: num, index: index }));` <br> `// indexed is [{ value: 1, index: 0 }, { value: 2, index: 1 }, ...]` |
+| Transforming objects | `const persons = [{ name: 'John' }, { name: 'Jane' }];` <br> `const names = persons.map(person => person.name);` <br> `// names is ['John', 'Jane']` |
+
+[!TIP]
+#### Best Practices
+
+- Use `.map()` when you want to transform each element in an array.
+- Always return a value from the callback function.
+- Avoid modifying the original array or performing side effects in the callback.
+- Consider using `.map()` with arrow functions for more concise syntax.
+- Consider using `.map()` with arrow functions for more concise syntax.

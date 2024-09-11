@@ -98,6 +98,7 @@
 | `.findIndex()` | Returns the index of the first element in an array that satisfies a provided testing function    |
 
 ### Iteration Methods
+
 | Method       | Description                                                                                       |
 |:---          |:---                                                                                               |
 | `.forEach()` | Executes a function for each array element                                                        |
@@ -108,6 +109,7 @@
 | `.every()`   | Tests whether all elements in the array pass the test implemented by the provided function        |
 
 ### Other Array Methods
+
 | Method           | Description    |
 |:---              |:---    |
 | `Array.isArray()`| Determines whether the passed value is an array    |

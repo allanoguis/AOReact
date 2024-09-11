@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./styles/App.css";
-import ButtonCount from "./component/ButtonCount.tsx";
-import DiveExperiment from "./component/DiveExperiment.tsx";
+import ButtonCount from "./modules/ButtonCount.tsx";
+import AgeHook from "./modules/AgeHook.tsx";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello World</h1>
         <ButtonCount />
-        <DiveExperiment />
+        <AgeHook />
       </header>
     </div>
   );

@@ -2,12 +2,12 @@ import React, { Fragment, useState } from "react";
 import "../styles/App.css";
 
 const ButtonCount: React.FC = () => {
-  const [count, setCount] = useState<number>(0);
-  const [colors, setColors] = useState<[string, string]>(['orange', 'red']);
+  let [count, setCount] = useState<number>(0);
+  let [colors, setColors] = useState<[string, string]>(['orange', 'red']);
 
-  const generateColor = () => `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+  let generateColor = () => `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 
-  const handleClick = (): void => {
+  let handleClick = (): void => {
     setCount(prevCount => prevCount + 1);
     setColors([generateColor(), generateColor()]);
   }

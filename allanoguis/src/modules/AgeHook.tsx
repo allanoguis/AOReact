@@ -1,34 +1,37 @@
 import React, { useState } from "react";
 import "../styles/App.css";
 
-const DiveExperiment: React.FC = () => {
-    const [myAge, setMyAge] = useState<number>(0);
-    const [result, setResult] = useState<string>('');
+const AgeHook: React.FC = () => {
+    let [myAge, setMyAge] = useState<number>(0);
+    let [result, setResult] = useState<string>('');
 
 // if age is a float, set it to whole number
-    const handleAgeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const value = parseInt(e.target.value, 10);
+    let handleAgeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        let value = parseInt(e.target.value, 10);
         setMyAge(isNaN(value) ? 0 : value);
     };
 
-    const handleClick = (): void => {
+    let handleClick = (): void => {
         try {
             if (typeof myAge !== 'number' || isNaN(myAge) || !Number.isInteger(myAge)) {
                 throw new Error('Please enter a valid whole number for age');
             }
 
-            const over500Messages = [
-                'Dude you are bored. Go out and touch grass',
+            let over500 = [
+                'Dude you are bored. Go out and touch grass.',
                 'Are you a time traveler?',
-                'You must have seen some things',
-                'Ancient one, share your wisdom',
+                'You must have seen some things.',
+                'Ancient one, share your wisdom.',
                 'How many centuries have you seen?',
                 'You are probably.. Idk, immortal?',
                 `You're are a dragon aren't you?`,
                 `Aren't you going to die?`,
                 `I'm getting tired of this.`,
                 `Okay, you're done.`,
-                `Alright, stop it. You're embarrassing me.`
+                `Alright, stop it. You're embarrassing me.`,
+                `You're old.`,
+                `I'm getting real tired of this.`,
+                `Your age is.. Over 9000! (meme reference)`
             ];
 
             switch (true) {
@@ -54,8 +57,8 @@ const DiveExperiment: React.FC = () => {
                     setResult('You have achieved god level');
                     break;
                 case myAge >= 500:
-                    const randomIndex = Math.floor(Math.random() * over500Messages.length);
-                    setResult(over500Messages[randomIndex]);
+                    const randomIndex = Math.floor(Math.random() * over500.length);
+                    setResult(over500[randomIndex]);
                     break;
                 default:
                     throw new Error('Unexpected age value');
@@ -83,4 +86,4 @@ const DiveExperiment: React.FC = () => {
     )
 }
 
-export default DiveExperiment;
+export default AgeHook;

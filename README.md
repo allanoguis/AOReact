@@ -2,40 +2,7 @@
 
 Rebuilding my personal website using React.JS
 
-## Learn React
-
-- [ ] Learn React
-- [ ] Learn React Hooks
-- [ ] Learn React Router
-- [ ] Learn React Context
-- [ ] Learn React Redux
-- [ ] Learn React Testing
-- [ ] Learn React Performance
-- [ ] Learn React Best Practices
-
-## Learn Best Practices
-
-- [ ] Component Composition
-- [ ] Component State
-- [ ] Component Lifecycle
-- [ ] Component Hooks
-- [ ] Component Context
-- [ ] Component Reducer
-- [ ] Component Effect
-- [ ] Component Ref
-- [ ] Component Memo
-
-## Explore React Frameworks
-
-- [ ] Explore React Frameworks
-- [ ] Explore React Native
-- [ ] Explore Next.js
-- [ ] Explore Gatsby
-- [ ] Explore React Three Fiber
-- [ ] Explore React VR
-- [ ] Explore React Native Web
-
-### Javascript Refresher
+# Javascript Refresher
 
 - [x] Variables
 - [x] Arithmetic Operators
@@ -56,8 +23,8 @@ Rebuilding my personal website using React.JS
 - [x] String Template Literals
 - [x] Method Chaining
 - [x] Logical Operators
-- [ ] Loops
-- [ ] Functions
+- [x] Loops
+- [x] Functions
 - [ ] Arrays
 - [ ] Logical Operators
 - [ ] Spread Operators
@@ -99,7 +66,40 @@ Rebuilding my personal website using React.JS
 - [ ] JSON
 - [ ] Fetch Data from API
 
-#### Build Projects
+## Learn React
+
+- [ ] Learn React
+- [ ] Learn React Hooks
+- [ ] Learn React Router
+- [ ] Learn React Context
+- [ ] Learn React Redux
+- [ ] Learn React Testing
+- [ ] Learn React Performance
+- [ ] Learn React Best Practices
+
+## Learn Best Practices
+
+- [ ] Component Composition
+- [ ] Component State
+- [ ] Component Lifecycle
+- [ ] Component Hooks
+- [ ] Component Context
+- [ ] Component Reducer
+- [ ] Component Effect
+- [ ] Component Ref
+- [ ] Component Memo
+
+## Explore React Frameworks
+
+- [ ] Explore React Frameworks
+- [ ] Explore React Native
+- [ ] Explore Next.js
+- [ ] Explore Gatsby
+- [ ] Explore React Three Fiber
+- [ ] Explore React VR
+- [ ] Explore React Native Web
+
+### Build Projects
 
 - [ ] Build a personal website
 - [ ] Build a portfolio website

@@ -40,3 +40,44 @@
 | `.entries()`     | Returns a new Array Iterator object that contains the key/value pairs for each index in the array  |
 | `.keys()`        | Returns a new Array Iterator object that contains the keys for each index in the array |
 | `.values()`      | Returns a new Array Iterator object that contains the values for each index in the array   |
+
+### Reducer Methods
+
+| Method     | Description  |
+|:---        |:---  |
+| `.reduce()`| Executes a reducer function on each element of the array, resulting in a single output value |
+
+#### `.reduce()` Explained
+
+- **Purpose**: Reduces an array to a single value.
+- **Syntax**: `array.reduce(callback(accumulator, currentValue, index, array), initialValue)`
+
+- **Key Components**:
+  1. `callback`: Function called on each array element
+  2. `accumulator`: Stores the accumulated result
+  3. `currentValue`: Current element being processed
+  4. `index`: Index of the current element (optional)
+  5. `array`: The original array (optional)
+  6. `initialValue`: Starting value for the accumulator (optional, but recommended)
+
+- **Process**:
+  1. Executes the callback function for each array element
+  2. Passes the result to the next iteration as the accumulator
+  3. Returns the final accumulated value
+
+- **Example** (Sum of numbers):
+  ```javascript
+  const numbers = [1, 2, 3, 4];
+  const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+  console.log(sum); // Output: 10
+  ```
+
+- **Use Cases**:
+  - Summing numbers
+  - Flattening arrays
+  - Grouping objects
+  - Counting occurrences
+
+- **Tip**: Always provide an initialValue to avoid unexpected behavior with empty arrays.
+
+# Functions

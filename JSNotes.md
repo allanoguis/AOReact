@@ -421,7 +421,7 @@ const animal = Animal.create('Generic Animal');
 animal.speak(); // Outputs: Generic Animal makes a sound.
 ```
 
-**Key Characteristics__
+Key Characteristics
 
 | Feature | Description |
 |:--------|:------------|
@@ -452,7 +452,7 @@ Static properties are properties that belong to the class itself, not to instanc
 | Shared | All instances of the class share the same static property | N/A |
 | Use cases | Class-level constants, counters, or utility properties | `static PI = 3.14159;` |
 
-#### Example
+Example
 
 ```javascript
 class Counter {

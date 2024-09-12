@@ -324,6 +324,7 @@ The `.map()` method creates a new array with the results of calling a provided f
 ```
 
 | Transforming objects |
+|:---------------------|
 
 ```
 `const persons = [{ name: 'John' }, { name: 'Jane' }];`

@@ -274,11 +274,11 @@ The `.map()` method creates a new array with the results of calling a provided f
 | `array` (optional) | The array `map` was called upon |
 | `thisArg` (optional) | Value to use as `this` when executing callback |
 
-#### Example Usage
+#### Example
 
 | Basic Usage |
 
-```
+```javascript
 `const numbers = [1, 2, 3, 4];` 
 `const doubled = numbers.map(num => num * 2);`
 `// doubled is [2, 4, 6, 8]` |
@@ -286,14 +286,14 @@ The `.map()` method creates a new array with the results of calling a provided f
 
 | With index |
 
-```
+```javascript
 `const indexed = numbers.map((num, index) => ({ value: num, index: index }));`
 `// indexed is [{ value: 1, index: 0 }, { value: 2, index: 1 }, ...]`
 ```
 
 | Transforming objects |
 
-```
+```javascript
 `const persons = [{ name: 'John' }, { name: 'Jane' }];`
 `const names = persons.map(person => person.name);`
 `// names is ['John', 'Jane']` |
@@ -326,9 +326,9 @@ Constructors are special functions used to create and initialize objects in Java
 | Capitalization | Constructor names are typically capitalized (convention) |
 | Return value | Constructors implicitly return the new object instance |
 
-### Example Usage
+### Example
 
-```
+```javascript
 function Car(make, model) {
   this.make = make;
   this.model = model;
@@ -387,9 +387,10 @@ Classes in JavaScript provide a more structured and intuitive way to create obje
 | Static Methods | Methods called on the class itself, not instances | `static create() { return new this(); }` |
 | Getters/Setters | Special methods for getting/setting values | `get fullName() { return this._fullName; }` |
 
-#### Example Usage
+#### Example
 
-```class Animal {
+```javascript
+class Animal {
   constructor(name) {
     this.name = name;
   }
@@ -437,7 +438,6 @@ animal.speak(); // Outputs: Generic Animal makes a sound.
 > - Prefer composition over inheritance for more flexible code.
 > - Use `super()` in subclass constructors before accessing `this`.
 > - Avoid creating too many levels of inheritance.
-
 > [!NOTE]
 >Classes in JavaScript are primarily syntactic sugar over the existing prototype-based inheritance. They do not introduce a new object-oriented inheritance model to the language.
 
@@ -452,9 +452,10 @@ Static properties are properties that belong to the class itself, not to instanc
 | Shared | All instances of the class share the same static property | N/A |
 | Use cases | Class-level constants, counters, or utility properties | `static PI = 3.14159;` |
 
-#### Example Usage
+#### Example
 
-```class Counter {
+```javascript
+class Counter {
   static count = 0;
 
   constructor() {

@@ -254,7 +254,7 @@ The `.map()` method creates a new array with the results of calling a provided f
 | Return value | A new array with each element being the result of the callback function |
 | Mutates original array? | No |
 
-#### Parameters
+### Parameters
 
 | Parameter | Description |
 |:----------|:------------|
@@ -266,27 +266,27 @@ The `.map()` method creates a new array with the results of calling a provided f
 
 Example
 
-**Basic** **Usage**
+#### Basic Usage
 
 ```javascript
-`const numbers = [1, 2, 3, 4];` 
-`const doubled = numbers.map(num => num * 2);`
-`// doubled is [2, 4, 6, 8]` |
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(num => num * 2);
+// doubled is [2, 4, 6, 8]
 ```
 
 **With* *Index**
 
 ```javascript
-`const indexed = numbers.map((num, index) => ({ value: num, index: index }));`
-`// indexed is [{ value: 1, index: 0 }, { value: 2, index: 1 }, ...]`
+const indexed = numbers.map((num, index) => ({ value: num, index: index }));
+// indexed is [{ value: 1, index: 0 }, { value: 2, index: 1 }, ...]
 ```
 
 **Transforming** **Objects**
 
 ```javascript
-`const persons = [{ name: 'John' }, { name: 'Jane' }];`
-`const names = persons.map(person => person.name);`
-`// names is ['John', 'Jane']` |
+const persons = [{ name: 'John' }, { name: 'Jane' }];
+const names = persons.map(person => person.name);
+// names is ['John', 'Jane']
 ```
 
 > [!TIP]
@@ -302,10 +302,25 @@ Constructors are special functions used to create and initialize objects in Java
 
 ### Basic Syntax
 
-| Syntax | Description | Example |
-|:-------|:------------|:--------|
-| `function Constructor() {}` | Traditional function syntax | `function Person(name) { this.name = name; }` |
-| `class Constructor {}` | ES6 class syntax | `class Person { constructor(name) { this.name = name; } }` |
+| Syntax | Description |
+|:-------|:------------|
+| `function Constructor() {}` | Traditional function syntax | 
+
+Example
+
+```javascript
+function Person(name) { this.name = name; }
+```
+
+| Syntax | Description |
+|:-------|:------------|
+| `class Constructor {}` | ES6 class syntax |
+
+Example
+
+```javascript
+class Person { constructor(name) { this.name = name; } }
+```
 
 ***Key*** ***Characteristics***
 

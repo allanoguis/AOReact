@@ -387,7 +387,7 @@ Classes in JavaScript provide a more structured and intuitive way to create obje
 | Static Methods | Methods called on the class itself, not instances | `static create() { return new this(); }` |
 | Getters/Setters | Special methods for getting/setting values | `get fullName() { return this._fullName; }` |
 
-#### Example
+Example
 
 ```javascript
 class Animal {
@@ -421,7 +421,7 @@ const animal = Animal.create('Generic Animal');
 animal.speak(); // Outputs: Generic Animal makes a sound.
 ```
 
-### Key Characteristics
+**Key Characteristics__
 
 | Feature | Description |
 |:--------|:------------|

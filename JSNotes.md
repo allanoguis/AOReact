@@ -421,7 +421,7 @@ const animal = Animal.create('Generic Animal');
 animal.speak(); // Outputs: Generic Animal makes a sound.
 ```
 
-Key Characteristics
+***Key Characteristics***
 
 | Feature | Description |
 |:--------|:------------|
@@ -431,7 +431,8 @@ Key Characteristics
 | Hoisting | Unlike function declarations, class declarations are not hoisted |
 
 > [!NOTE]
->Classes in JavaScript are primarily syntactic sugar over the existing prototype-based inheritance. They do not introduce a new object-oriented inheritance model to the language.
+> Classes in JavaScript are primarily syntactic sugar over the existing prototype-based inheritance. They do not introduce a new object-oriented inheritance model to the language.
+>
 > [!TIP]
 >
 > - Use PascalCase for class names.
@@ -512,4 +513,4 @@ console.log(Counter.getCount()); // 2
 | Function         | Description                                                                                   |
 |:---              |:---                                                                                           |
 | `JSON.parse()`   | Parses a JSON string, constructing the JavaScript value or object described by the string     |
-| `JSON.stringify()`| Converts a JavaScript object or value to a JSON string 
+| `JSON.stringify()`| Converts a JavaScript object or value to a JSON string

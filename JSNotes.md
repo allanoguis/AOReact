@@ -218,7 +218,7 @@ Arrow functions provide a concise syntax for writing function expressions.
 | `(param1, param2) => {}` | Multiple parameters | `const add = (a, b) => { return a + b; }` |
 | `() => expression` | Implicit return for single expressions | `const double = x => x * 2;` |
 
-***Key*** ***Characteristics***
+### Key Characteristics
 
 | Feature | Description |
 |:--------|:------------|
@@ -227,7 +227,7 @@ Arrow functions provide a concise syntax for writing function expressions.
 | Cannot be used as constructors | Arrow functions cannot be used with the `new` keyword |
 | No `prototype` property | Arrow functions do not have a `prototype` property |
 
-***Use*** ***Cases***
+### Use Cases
 
 | Scenario | Description |
 |:---------|:------------|
@@ -304,7 +304,7 @@ Constructors are special functions used to create and initialize objects in Java
 
 | Syntax | Description |
 |:-------|:------------|
-| `function Constructor() {}` | Traditional function syntax | 
+| `function Constructor() {}` | Traditional function syntax |
 
 Example
 
@@ -370,10 +370,10 @@ myCar.drive(); // Outputs: Driving a Honda Civic
 > - Avoid returning a value from the constructor (it will override the instance).
 > - Consider using factory functions for more flexible object creation patterns.
 
+## Classes
+
 > [!NOTE]
 > The `class` syntax in JavaScript is syntactic sugar over the prototype-based inheritance model. It doesn't introduce a new object-oriented inheritance model.
-
-## Classes
 
 Classes in JavaScript provide a more structured and intuitive way to create objects and implement inheritance.
 
@@ -519,4 +519,4 @@ console.log(Counter.getCount()); // 2
 | Function         | Description                                                                                   |
 |:---              |:---                                                                                           |
 | `JSON.parse()`   | Parses a JSON string, constructing the JavaScript value or object described by the string     |
-| `JSON.stringify()`| Converts a JavaScript object or value to a JSON string
+| `JSON.stringify()`| Converts a JavaScript object or value to a JSON string |

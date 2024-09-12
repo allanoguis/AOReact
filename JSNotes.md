@@ -399,5 +399,6 @@ myCar.drive(); // Outputs: Driving a Honda Civic
 > - Use constructors to set up initial state and shared methods.
 > - Avoid returning a value from the constructor (it will override the instance).
 > - Consider using factory functions for more flexible object creation patterns.
+
 > [!NOTE]
 > The `class` syntax in JavaScript is syntactic sugar over the prototype-based inheritance model. It doesn't introduce a new object-oriented inheritance model.

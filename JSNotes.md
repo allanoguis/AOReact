@@ -72,6 +72,21 @@
 > - Declare variables at the top of their scope.
 > - Avoid global variables when possible.
 
+## Strings
+
+### String Methods
+
+| Method        | Description                                                                |
+|:---           |:---                                                                        |
+| `.split()`    | Splits a string into an array of substrings                                |
+| `.join()`     | Joins all elements of an array into a string                               |
+| `.slice()`    | Extracts a section of a string and returns it as a new string              |
+| `.substring()`| Returns the part of the string between the start and end indexes           |
+| `.toLowerCase()`| Converts a string to lowercase letters                                   |
+| `.toUpperCase()`| Converts a string to uppercase letters                                   |
+| `.trim()`     | Removes whitespace from both ends of a string                              |
+| `.replace()`  | Replaces a specified value with another value in a string                  |
+
 ## Arrays
 
 ### Mutator Methods
@@ -124,21 +139,6 @@
 | `.values()`      | Returns a new Array Iterator object that contains the values for each index in the array   |
 | `.sort()`        | Sorts the elements of an array in place and returns the sorted array                              |
 | `.reverse()`     | Reverses the order of the elements in an array in place                                           |
-
-## Strings
-
-### String Methods
-
-| Method        | Description                                                                |
-|:---           |:---                                                                        |
-| `.split()`    | Splits a string into an array of substrings                                |
-| `.join()`     | Joins all elements of an array into a string                               |
-| `.slice()`    | Extracts a section of a string and returns it as a new string              |
-| `.substring()`| Returns the part of the string between the start and end indexes           |
-| `.toLowerCase()`| Converts a string to lowercase letters                                   |
-| `.toUpperCase()`| Converts a string to uppercase letters                                   |
-| `.trim()`     | Removes whitespace from both ends of a string                              |
-| `.replace()`  | Replaces a specified value with another value in a string                  |
 
 ## Objects
 
@@ -252,44 +252,9 @@ Arrow functions provide a concise syntax for writing function expressions.
 > - Use traditional function syntax for complex functions or those that use `this` dynamically.
 > - Be aware that arrow functions are always anonymous, but can be assigned to variables if needed.
 
-## Timing and Asynchronous Operations
-
-### Timing Functions
-
-| Function        | Description                                                                                     |
-|:---             |:---                                                                                             |
-| `setTimeout()`  | Calls a function or evaluates an expression after a specified number of milliseconds            |
-| `setInterval()` | Calls a function or evaluates an expression at specified intervals (in milliseconds)            |
-| `clearTimeout()`| Cancels a timeout previously established by setTimeout()                                        |
-| `clearInterval()`| Cancels a timed, repeating action which was previously established by setInterval()            |
-
-### Promises and Async
-
-| Function/Syntax | Description                                                                                     |
-|:---             |:---                                                                                             |
-| `Promise.all()` | Takes an iterable of promises as an input, and returns a single Promise                         |
-| `Promise.race()`| Returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects |
-| `async/await`   | Syntactic sugar for working with promises                                                       |
-
-## DOM Manipulation
-
-| Function                    | Description                                                                         |
-|:---                         |:---                                                                                 |
-| `document.getElementById()` | Returns the element that has the ID attribute with the specified value              |
-| `document.querySelector()`  | Returns the first element that matches a specified CSS selector(s) in the document  |
-| `document.querySelectorAll()`| Returns a static NodeList containing all elements that match the specified CSS selector(s) |
-| `element.addEventListener()`| Attaches an event handler to the specified element                                  |
-
-## JSON Handling
-
-| Function         | Description                                                                                   |
-|:---              |:---                                                                                           |
-| `JSON.parse()`   | Parses a JSON string, constructing the JavaScript value or object described by the string     |
-| `JSON.stringify()`| Converts a JavaScript object or value to a JSON string                                       |
-
 ## Array Methods
 
-### .map()
+### The .map() Method
 
 The `.map()` method creates a new array with the results of calling a provided function on every element in the calling array.
 
@@ -321,7 +286,7 @@ The `.map()` method creates a new array with the results of calling a provided f
 
 | With index |
 
-``` 
+```
 `const indexed = numbers.map((num, index) => ({ value: num, index: index }));`
 `// indexed is [{ value: 1, index: 0 }, { value: 2, index: 1 }, ...]`
 ```
@@ -399,7 +364,6 @@ myCar.drive(); // Outputs: Driving a Honda Civic
 > - Use constructors to set up initial state and shared methods.
 > - Avoid returning a value from the constructor (it will override the instance).
 > - Consider using factory functions for more flexible object creation patterns.
-
 > [!NOTE]
 > The `class` syntax in JavaScript is syntactic sugar over the prototype-based inheritance model. It doesn't introduce a new object-oriented inheritance model.
 
@@ -423,10 +387,9 @@ Classes in JavaScript provide a more structured and intuitive way to create obje
 | Static Methods | Methods called on the class itself, not instances | `static create() { return new this(); }` |
 | Getters/Setters | Special methods for getting/setting values | `get fullName() { return this._fullName; }` |
 
-### Example Usage
+#### Example Usage
 
-```
-class Animal {
+```class Animal {
   constructor(name) {
     this.name = name;
   }
@@ -477,3 +440,75 @@ animal.speak(); // Outputs: Generic Animal makes a sound.
 
 > [!NOTE]
 >Classes in JavaScript are primarily syntactic sugar over the existing prototype-based inheritance. They do not introduce a new object-oriented inheritance model to the language.
+
+### Static Properties
+
+Static properties are properties that belong to the class itself, not to instances of the class.
+
+| Feature | Description | Example |
+|:--------|:------------|:--------|
+| Declaration | Use the `static` keyword before the property name | `static count = 0;` |
+| Access | Accessed using the class name, not on instances | `MyClass.count` |
+| Shared | All instances of the class share the same static property | N/A |
+| Use cases | Class-level constants, counters, or utility properties | `static PI = 3.14159;` |
+
+#### Example Usage
+
+```class Counter {
+  static count = 0;
+
+  constructor() {
+    Counter.count++;
+  }
+
+  static getCount() {
+    return Counter.count;
+  }
+}
+
+console.log(Counter.count); // 0
+new Counter();
+new Counter();
+console.log(Counter.getCount()); // 2
+```
+
+> [!TIP]
+>
+> - Use static properties for data that is shared across all instances of a class.
+> - Static properties are useful for caching, fixed-configuration, or any other data that doesn't need to be replicated across instances.
+> - Remember that static properties are not accessible on instances (`this.property` will not work).
+
+## Timing and Asynchronous Operations
+
+### Timing Functions
+
+| Function        | Description                                                                                     |
+|:---             |:---                                                                                             |
+| `setTimeout()`  | Calls a function or evaluates an expression after a specified number of milliseconds            |
+| `setInterval()` | Calls a function or evaluates an expression at specified intervals (in milliseconds)            |
+| `clearTimeout()`| Cancels a timeout previously established by setTimeout()                                        |
+| `clearInterval()`| Cancels a timed, repeating action which was previously established by setInterval()            |
+
+### Promises and Async
+
+| Function/Syntax | Description                                                                                     |
+|:---             |:---                                                                                             |
+| `Promise.all()` | Takes an iterable of promises as an input, and returns a single Promise                         |
+| `Promise.race()`| Returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects |
+| `async/await`   | Syntactic sugar for working with promises                                                       |
+
+## DOM Manipulation
+
+| Function                    | Description                                                                         |
+|:---                         |:---                                                                                 |
+| `document.getElementById()` | Returns the element that has the ID attribute with the specified value              |
+| `document.querySelector()`  | Returns the first element that matches a specified CSS selector(s) in the document  |
+| `document.querySelectorAll()`| Returns a static NodeList containing all elements that match the specified CSS selector(s) |
+| `element.addEventListener()`| Attaches an event handler to the specified element                                  |
+
+## JSON Handling
+
+| Function         | Description                                                                                   |
+|:---              |:---                                                                                           |
+| `JSON.parse()`   | Parses a JSON string, constructing the JavaScript value or object described by the string     |
+| `JSON.stringify()`| Converts a JavaScript object or value to a JSON string 

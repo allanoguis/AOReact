@@ -147,18 +147,8 @@
 | Method | Description | Example |
 |:-------|:------------|:--------|
 | Object literal | Create an object using curly braces | `let person = {name: "Alice", age: 30};` |
-
-| Constructor function | Create an object using a function |
-
-`function Person(name, age) { this.name = name; this.age = age; }`
-`let person = new Person("Alice", 30);` |
-
-| Object.create() | Create an object with a specified prototype |
-
-```
-`let personProto = {greet() { console.log("Hello!"); }}`
-`let person = Object.create(personProto);`
-```
+| Constructor function | Create an object using a function | `function Person(name, age) { this.name = name; this.age = age; }``let person = new Person("Alice", 30);` |
+| Object.create() | Create an object with a specified prototype |`let personProto = {greet() { console.log("Hello!"); }}``let person = Object.create(personProto);` |
 
 ### Accessing Object Properties
 

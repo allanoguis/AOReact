@@ -29,15 +29,15 @@ Rebuilding my personal website using React.JS with some extras.
   - [x] Array Methods
   - [x] Spread Operators
   - [x] Rest Parameters
-  - [x] For each ()
-  - [x] Map ()
-  - [x] Filter ()
-  - [x] Reduce ()
+  - [x] forEach()
+  - [x] Map()
+  - [x] Filter()
+  - [x] Reduce()
 - [x] Functions
   - [x] Callbacks
   - [x] Arrow Functions
-- [ ] Objects
-- [ ] Constructors
+- [x] Objects
+- [x] Constructors
 - [ ] Classes
 - [ ] Class List
 - [ ] Static Methods

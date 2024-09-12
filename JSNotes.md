@@ -193,8 +193,8 @@
 > - Use Object.create(null) for dictionary-style objects without prototypes.
 > - Use const when declaring object variables to prevent reassignment
 
-[!Note]
-the object's properties can still be modified.
+> [!Note]
+> the object's properties can still be modified.
 
 ## Math and Numbers
 

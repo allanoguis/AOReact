@@ -311,28 +311,28 @@ The `.map()` method creates a new array with the results of calling a provided f
 
 #### Example Usage
 
-| Example | Description |
-|:--------|:------------|
-| Basic usage |
+| Basic Usage |
 
 ```
 `const numbers = [1, 2, 3, 4];` 
 `const doubled = numbers.map(num => num * 2);`
 `// doubled is [2, 4, 6, 8]` |
-| With index | `const indexed = numbers.map((num, index) => ({ value: num, index: index }));`
+```
+
+| With index |
+
+``` 
+`const indexed = numbers.map((num, index) => ({ value: num, index: index }));`
 `// indexed is [{ value: 1, index: 0 }, { value: 2, index: 1 }, ...]`
 ```
 
 | Transforming objects |
-|:---------------------|
 
 ```
 `const persons = [{ name: 'John' }, { name: 'Jane' }];`
 `const names = persons.map(person => person.name);`
 `// names is ['John', 'Jane']` |
 ```
-
-#### Best Practices
 
 > [!TIP]
 >

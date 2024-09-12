@@ -191,7 +191,7 @@
 > - Use object literals for simple structures and classes for complex ones with methods.
 > - Avoid modifying built-in object prototypes.
 > - Use Object.create(null) for dictionary-style objects without prototypes.
-> - Use const when declaring object variables to prevent reassignment 
+> - Use const when declaring object variables to prevent reassignment
 
 [!Note]
 the object's properties can still be modified.
@@ -402,3 +402,78 @@ myCar.drive(); // Outputs: Driving a Honda Civic
 
 > [!NOTE]
 > The `class` syntax in JavaScript is syntactic sugar over the prototype-based inheritance model. It doesn't introduce a new object-oriented inheritance model.
+
+## Classes
+
+Classes in JavaScript provide a more structured and intuitive way to create objects and implement inheritance.
+
+### Class Declaration
+
+| Syntax | Description | Example |
+|:-------|:------------|:--------|
+| `class ClassName {}` | Basic class declaration | `class Person {}` |
+| `class ClassName extends ParentClass {}` | Class with inheritance | `class Student extends Person {}` |
+
+### Class Methods and Properties
+
+| Feature | Description | Example |
+|:--------|:------------|:--------|
+| Constructor | Special method for creating and initializing objects | `constructor(name) { this.name = name; }` |
+| Methods | Functions defined inside the class | `greet() { console.log('Hello!'); }` |
+| Static Methods | Methods called on the class itself, not instances | `static create() { return new this(); }` |
+| Getters/Setters | Special methods for getting/setting values | `get fullName() { return this._fullName; }` |
+
+### Example Usage
+
+```
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a sound.`);
+  }
+
+  static create(name) {
+    return new this(name);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name) {
+    super(name);
+  }
+
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+const dog = new Dog('Rex');
+dog.speak(); // Outputs: Rex barks.
+
+const animal = Animal.create('Generic Animal');
+animal.speak(); // Outputs: Generic Animal makes a sound.
+```
+
+### Key Characteristics
+
+| Feature | Description |
+|:--------|:------------|
+| Inheritance | Classes can inherit properties and methods from other classes |
+| Encapsulation | Classes group related data and functionality together |
+| Polymorphism | Subclasses can override methods from parent classes |
+| Hoisting | Unlike function declarations, class declarations are not hoisted |
+
+> [!TIP]
+>
+> - Use PascalCase for class names.
+> - Keep classes focused on a single responsibility.
+> - Use getters and setters for computed properties.
+> - Prefer composition over inheritance for more flexible code.
+> - Use `super()` in subclass constructors before accessing `this`.
+> - Avoid creating too many levels of inheritance.
+
+> [!NOTE]
+>Classes in JavaScript are primarily syntactic sugar over the existing prototype-based inheritance. They do not introduce a new object-oriented inheritance model to the language.

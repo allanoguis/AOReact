@@ -180,6 +180,9 @@
 
 ### Prototypes and Inheritance
 
+> [!Note]
+> the object's properties can still be modified.
+
 | Concept | Description |
 |:--------|:------------|
 | Prototype chain | Objects inherit properties and methods from their prototype |
@@ -192,9 +195,6 @@
 > - Avoid modifying built-in object prototypes.
 > - Use Object.create(null) for dictionary-style objects without prototypes.
 > - Use const when declaring object variables to prevent reassignment
-
-> [!Note]
-> the object's properties can still be modified.
 
 ## Math and Numbers
 
@@ -228,7 +228,7 @@ Arrow functions provide a concise syntax for writing function expressions.
 | `(param1, param2) => {}` | Multiple parameters | `const add = (a, b) => { return a + b; }` |
 | `() => expression` | Implicit return for single expressions | `const double = x => x * 2;` |
 
-### Key Characteristics
+***Key*** ***Characteristics***
 
 | Feature | Description |
 |:--------|:------------|
@@ -237,7 +237,7 @@ Arrow functions provide a concise syntax for writing function expressions.
 | Cannot be used as constructors | Arrow functions cannot be used with the `new` keyword |
 | No `prototype` property | Arrow functions do not have a `prototype` property |
 
-### Use Cases
+***Use*** ***Cases***
 
 | Scenario | Description |
 |:---------|:------------|
@@ -274,9 +274,9 @@ The `.map()` method creates a new array with the results of calling a provided f
 | `array` (optional) | The array `map` was called upon |
 | `thisArg` (optional) | Value to use as `this` when executing callback |
 
-#### Example
+Example
 
-| Basic Usage |
+**Basic** **Usage**
 
 ```javascript
 `const numbers = [1, 2, 3, 4];` 
@@ -284,14 +284,14 @@ The `.map()` method creates a new array with the results of calling a provided f
 `// doubled is [2, 4, 6, 8]` |
 ```
 
-| With index |
+**With* *Index**
 
 ```javascript
 `const indexed = numbers.map((num, index) => ({ value: num, index: index }));`
 `// indexed is [{ value: 1, index: 0 }, { value: 2, index: 1 }, ...]`
 ```
 
-| Transforming objects |
+**Transforming** **Objects**
 
 ```javascript
 `const persons = [{ name: 'John' }, { name: 'Jane' }];`
@@ -317,7 +317,7 @@ Constructors are special functions used to create and initialize objects in Java
 | `function Constructor() {}` | Traditional function syntax | `function Person(name) { this.name = name; }` |
 | `class Constructor {}` | ES6 class syntax | `class Person { constructor(name) { this.name = name; } }` |
 
-### Key Characteristics
+***Key*** ***Characteristics***
 
 | Feature | Description |
 |:--------|:------------|
@@ -326,7 +326,7 @@ Constructors are special functions used to create and initialize objects in Java
 | Capitalization | Constructor names are typically capitalized (convention) |
 | Return value | Constructors implicitly return the new object instance |
 
-### Example
+Example
 
 ```javascript
 function Car(make, model) {
@@ -364,6 +364,7 @@ myCar.drive(); // Outputs: Driving a Honda Civic
 > - Use constructors to set up initial state and shared methods.
 > - Avoid returning a value from the constructor (it will override the instance).
 > - Consider using factory functions for more flexible object creation patterns.
+
 > [!NOTE]
 > The `class` syntax in JavaScript is syntactic sugar over the prototype-based inheritance model. It doesn't introduce a new object-oriented inheritance model.
 
@@ -423,6 +424,9 @@ animal.speak(); // Outputs: Generic Animal makes a sound.
 
 ***Key Characteristics***
 
+> [!NOTE]
+> Classes in JavaScript are primarily syntactic sugar over the existing prototype-based inheritance. They do not introduce a new object-oriented inheritance model to the language.
+
 | Feature | Description |
 |:--------|:------------|
 | Inheritance | Classes can inherit properties and methods from other classes |
@@ -430,9 +434,6 @@ animal.speak(); // Outputs: Generic Animal makes a sound.
 | Polymorphism | Subclasses can override methods from parent classes |
 | Hoisting | Unlike function declarations, class declarations are not hoisted |
 
-> [!NOTE]
-> Classes in JavaScript are primarily syntactic sugar over the existing prototype-based inheritance. They do not introduce a new object-oriented inheritance model to the language.
->
 > [!TIP]
 >
 > - Use PascalCase for class names.

@@ -430,6 +430,8 @@ animal.speak(); // Outputs: Generic Animal makes a sound.
 | Polymorphism | Subclasses can override methods from parent classes |
 | Hoisting | Unlike function declarations, class declarations are not hoisted |
 
+> [!NOTE]
+>Classes in JavaScript are primarily syntactic sugar over the existing prototype-based inheritance. They do not introduce a new object-oriented inheritance model to the language.
 > [!TIP]
 >
 > - Use PascalCase for class names.
@@ -438,8 +440,6 @@ animal.speak(); // Outputs: Generic Animal makes a sound.
 > - Prefer composition over inheritance for more flexible code.
 > - Use `super()` in subclass constructors before accessing `this`.
 > - Avoid creating too many levels of inheritance.
-> [!NOTE]
->Classes in JavaScript are primarily syntactic sugar over the existing prototype-based inheritance. They do not introduce a new object-oriented inheritance model to the language.
 
 ### Static Properties
 

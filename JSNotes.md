@@ -340,3 +340,64 @@ The `.map()` method creates a new array with the results of calling a provided f
 > - Always return a value from the callback function.
 > - Avoid modifying the original array or performing side effects in the callback.
 > - Consider using `.map()` with arrow functions for more concise syntax.
+
+## Constructors
+
+Constructors are special functions used to create and initialize objects in JavaScript.
+
+### Basic Syntax
+
+| Syntax | Description | Example |
+|:-------|:------------|:--------|
+| `function Constructor() {}` | Traditional function syntax | `function Person(name) { this.name = name; }` |
+| `class Constructor {}` | ES6 class syntax | `class Person { constructor(name) { this.name = name; } }` |
+
+### Key Characteristics
+
+| Feature | Description |
+|:--------|:------------|
+| `new` keyword | Used to create instances of the constructor |
+| `this` binding | Inside the constructor, `this` refers to the newly created instance |
+| Capitalization | Constructor names are typically capitalized (convention) |
+| Return value | Constructors implicitly return the new object instance |
+
+### Example Usage
+
+```
+function Car(make, model) {
+  this.make = make;
+  this.model = model;
+  this.drive = function() {
+    console.log(`Driving a ${this.make} ${this.model}`);
+  };
+}
+
+const myCar = new Car('Toyota', 'Corolla');
+myCar.drive(); // Outputs: Driving a Toyota Corolla
+
+// ES6 Class Syntax
+class Car {
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+  
+  drive() {
+    console.log(`Driving a ${this.make} ${this.model}`);
+  }
+}
+
+const myCar = new Car('Honda', 'Civic');
+myCar.drive(); // Outputs: Driving a Honda Civic
+```
+
+> [!TIP]
+>
+> - Use ES6 class syntax for cleaner, more intuitive object creation.
+> - Always use the `new` keyword when invoking a constructor.
+> - Capitalize constructor names to distinguish them from regular functions.
+> - Use constructors to set up initial state and shared methods.
+> - Avoid returning a value from the constructor (it will override the instance).
+> - Consider using factory functions for more flexible object creation patterns.
+> [!NOTE]
+> The `class` syntax in JavaScript is syntactic sugar over the prototype-based inheritance model. It doesn't introduce a new object-oriented inheritance model.

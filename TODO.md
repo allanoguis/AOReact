@@ -47,11 +47,11 @@ Rebuilding my personal website using React.JS with some extras.
 - [x] Modules
 - [x] ES6 Modules
 - [x] Error Handling
-- [ ] Debugging
-- [ ] DOMs
-- [ ] DOM Navigation
-- [ ] DOM Manipulation
-- [ ] Element Selectors
+- [x] Debugging (try / catch / finish)
+- [x] DOMs
+- [x] DOM Navigation
+- [x] DOM Manipulation
+- [x] Element Selectors
 - [ ] Event Listeners
 - [ ] Event Handlers
 - [ ] Event Objects

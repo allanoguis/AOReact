@@ -1,5 +1,68 @@
 # **JavaScript Notes**
 
+## Regular Expressions (RegEx)
+
+Regular expressions are powerful patterns used to match character combinations in strings.
+
+***Syntax***
+
+| Symbol | Meaning |
+|:-------|:--------|
+| `.`     | Any character except newline |
+| `*`     | 0 or more occurrences |
+| `+`     | 1 or more occurrences |
+| `?`     | 0 or 1 occurrence |
+| `^`     | Start of string |
+| `$`     | End of string |
+| `\`     | Escape character |
+| `[]`    | Character set |
+| `[^]`   | Negated character set |
+| `\d`    | Digit |
+| `\w`    | Word character (alphanumeric + underscore) |
+| `\s`    | Whitespace character |
+
+### Quantifiers
+
+| Symbol | Meaning |
+|:-------|:--------|
+| `{n}`   | Exactly n occurrences |
+| `{n,}`  | n or more occurrences |
+| `{n,m}` | Between n and m occurrences |
+
+### Special Characters
+
+| Symbol | Meaning |
+|:-------|:--------|
+| `\b`    | Word boundary |
+| `\B`    | Not a word boundary |
+| `\A`    | Start of string |
+| `\Z`    | End of string |
+
+### Groups and Capturing
+
+| Symbol | Meaning |
+|:-------|:--------|
+| `()`    | Capturing group |
+| `(?:)`  | Non-capturing group |
+| `\1, \2` | Backreferences to captured groups |
+
+### Flags
+
+| Flag | Meaning |
+|:-----|:--------|
+| `g`  | Global search |
+| `i`  | Case-insensitive search |
+| `m`  | Multi-line search |
+
+Examples
+
+- Email: `/^[\w.-]+@[\w.-]+\.\w+$/`
+- URL: `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/`
+- Date (YYYY-MM-DD): `/^\d{4}-\d{2}-\d{2}$/`
+
+> [!TIP]
+> Use online tools like regex101.com to test and debug your regular expressions.
+
 ## Variables
 
 ### Declaration
@@ -266,7 +329,7 @@ The `.map()` method creates a new array with the results of calling a provided f
 
 Example
 
-#### Basic Usage
+Basic Usage
 
 ```javascript
 const numbers = [1, 2, 3, 4];
@@ -300,7 +363,7 @@ const names = persons.map(person => person.name);
 
 Constructors are special functions used to create and initialize objects in JavaScript.
 
-### Basic Syntax
+***Basic*** ***Syntax***
 
 | Syntax | Description |
 |:-------|:------------|
@@ -486,6 +549,172 @@ console.log(Counter.getCount()); // 2
 > - Static properties are useful for caching, fixed-configuration, or any other data that doesn't need to be replicated across instances.
 > - Remember that static properties are not accessible on instances (`this.property` will not work).
 
+## Getters and Setters
+
+Getters and setters are special methods that allow you to define how to get and set the values of object properties.
+
+> [!NOTE]
+> Getters and setters are supported in modern JavaScript environments, including all major browsers and Node.js versions.
+
+***Syntax***
+
+| Syntax | Description |
+|:-------|:------------|
+| `get propName() {}` | Defines a getter for the property `propName` |
+| `set propName(value) {}` | Defines a setter for the property `propName` |
+
+### Key Features
+
+| Feature | Description |
+|:--------|:------------|
+| Computed Properties | Allow for dynamic property names |
+| Access Control | Provide a way to control how properties are accessed or modified |
+| Data Validation | Can be used to validate data before setting a property |
+| Lazy Loading | Can be used to delay the initialization of a property until it's first accessed |
+
+Examples
+
+***Basic Getter and Setter***
+
+```javascript
+javascript
+const person = {
+firstName: 'John',
+lastName: 'Doe',
+get fullName() {
+return ${this.firstName} ${this.lastName};
+},
+set fullName(name) {
+[this.firstName, this.lastName] = name.split(' ');
+}
+};
+console.log(person.fullName); // "John Doe"
+person.fullName = 'Jane Smith';
+console.log(person.firstName); // "Jane"
+```
+
+***With Data Validation***
+
+```javascript
+class Temperature {
+constructor(celsius) {
+this.celsius = celsius;
+}
+get fahrenheit() {
+return this.celsius 9/5 + 32;
+}
+set fahrenheit(value) {
+if (typeof value !== 'number') {
+throw new Error('Temperature must be a number');
+}
+this.celsius = (value - 32) 5/9;
+}
+}
+const temp = new Temperature(25);
+console.log(temp.fahrenheit); // 77
+temp.fahrenheit = 86;
+console.log(temp.celsius); // 30
+```
+
+> [!TIP]
+> Use getters and setters to create more intuitive and self-documenting code, especially when working with complex objects or when you need to add logic to property access.
+>
+> - Use getters for computed properties that don't require parameters.
+> - Use setters for validation or to trigger side effects when a property is set.
+> - Keep getters and setters simple; avoid complex logic.
+> - Use consistent naming conventions (e.g., `get value()` and `set value()`).
+> - Be cautious with setters that modify other properties to avoid unexpected behavior.
+
+## Destructuring
+
+### Use Cases
+
+Destructuring is a JavaScript expression that allows you to extract data from arrays or properties from objects into distinct variables.
+
+| Use Case | Description |
+|:---------|:------------|
+| Variable assignment | Quickly extract values from arrays or objects |
+| Function parameters | Directly access object properties in function arguments |
+| Swapping variables | Easily swap values without a temporary variable |
+| Returning multiple values | Return multiple values from a function as an array or object |
+
+> [!NOTE]
+> Destructuring is supported in modern JavaScript environments (ES6+) and works with both arrays and objects.
+
+### Array Destructuring
+
+| Syntax | Description |
+|:-------|:------------|
+| `const [a, b] = array;` | Basic array destructuring |
+| `const [a, , b] = array;` | Skipping elements |
+| `const [a, ...rest] = array;` | Rest pattern |
+| `const [a = defaultValue] = array;` | Default values |
+
+Examples
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const [first, second, ...rest] = numbers;
+console.log(first); // 1
+console.log(second); // 2
+console.log(rest); // [3, 4, 5]
+const [a, , b] = numbers;
+console.log(a); // 1
+console.log(b); // 3
+```
+
+### Object Destructuring
+
+| Syntax | Description |
+|:-------|:------------|
+| `const { prop1, prop2 } = object;` | Basic object destructuring |
+| `const { prop: newName } = object;` | Assigning to new variable names |
+| `const { prop = defaultValue } = object;` | Default values |
+| `const { ...rest } = object;` | Rest pattern |
+
+Examples
+
+```javascript
+const person = {
+name: 'John Doe',
+age: 30,
+city: 'New York'
+};
+const { name, age, country = 'USA' } = person;
+console.log(name); // 'John Doe'
+console.log(age); // 30
+console.log(country); // 'USA'
+const { name: fullName, ...rest } = person;
+console.log(fullName); // 'John Doe'
+console.log(rest); // { age: 30, city: 'New York' }
+```
+
+### Nested Destructuring
+
+| Syntax | Description |
+|:-------|:------------|
+| `const { prop: { subProp } } = object;` | Nested object destructuring |
+| `const [{ prop }] = arrayOfObjects;` | Mixed array and object destructuring |
+
+#### Function Parameter Destructuring
+
+Examples
+
+```javascript
+function printPerson({ name, age }) {
+console.log(${name} is ${age} years old.);
+}
+const person = { name: 'Alice', age: 25, city: 'London' };
+printPerson(person); // 'Alice is 25 years old.'
+```
+
+> [!TIP]
+
+> - Use destructuring to make your code more readable and concise.
+> - Combine destructuring with default values to handle missing properties gracefully.
+> - Use the rest pattern to collect remaining elements or properties.
+> - Be cautious with deeply nested destructuring as it can make code harder to read.
+
 ## Timing and Asynchronous Operations
 
 ### Timing Functions
@@ -520,3 +749,6 @@ console.log(Counter.getCount()); // 2
 |:---              |:---                                                                                           |
 | `JSON.parse()`   | Parses a JSON string, constructing the JavaScript value or object described by the string     |
 | `JSON.stringify()`| Converts a JavaScript object or value to a JSON string |
+
+
+[EOF]

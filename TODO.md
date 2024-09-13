@@ -38,11 +38,11 @@ Rebuilding my personal website using React.JS with some extras.
   - [x] Arrow Functions
 - [x] Objects
 - [x] Constructors
-- [ ] Classes
-- [ ] Class List
-- [ ] Static Methods
-- [ ] Inheritance
-- [ ] Getters && Setters
+- [x] Classes
+- [x] Class List
+- [x] Static Methods
+- [x] Inheritance
+- [x] Getters && Setters
 - [ ] Destructuring
 - [ ] Modules
 - [ ] ES6 Modules

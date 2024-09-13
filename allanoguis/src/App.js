@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
 import "./styles/App.css";
-import ButtonCount from "./modules/ButtonCount.tsx";
-import AgeHook from "./modules/R18Gatekeeper.tsx";
-import PasswordGenerator from "./modules/PasswordGenerator.tsx";
+import ButtonCount from "./projects/ButtonCount.tsx";
+import AgeHook from "./projects/R18Gatekeeper.tsx";
+import PasswordGenerator from "./projects/PasswordGenerator.tsx";
 
 function App() {
   return (

@@ -627,7 +627,7 @@ console.log(temp.celsius); // 30
 
 ## Destructuring
 
-### Use Cases
+***Use Cases***
 
 Destructuring is a JavaScript expression that allows you to extract data from arrays or properties from objects into distinct variables.
 
@@ -709,7 +709,7 @@ printPerson(person); // 'Alice is 25 years old.'
 ```
 
 > [!TIP]
-
+>
 > - Use destructuring to make your code more readable and concise.
 > - Combine destructuring with default values to handle missing properties gracefully.
 > - Use the rest pattern to collect remaining elements or properties.
@@ -749,6 +749,5 @@ printPerson(person); // 'Alice is 25 years old.'
 |:---              |:---                                                                                           |
 | `JSON.parse()`   | Parses a JSON string, constructing the JavaScript value or object described by the string     |
 | `JSON.stringify()`| Converts a JavaScript object or value to a JSON string |
-
 
 [EOF]

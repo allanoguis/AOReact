@@ -1,0 +1,43 @@
+.conway-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.conway-grid {
+  display: grid;
+  grid-template-columns: repeat(50, 20px); /* Adjust the number and size as needed */
+  gap: 1px;
+  background-color: #ccc;
+  padding: 1px;
+  border: 1px solid #999;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.cell.alive {
+  background-color: #000;
+}
+
+.controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button .start {
+    background-color: linear-gradient;
+}

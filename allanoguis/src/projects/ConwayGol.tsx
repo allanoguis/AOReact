@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useRef } from "react";
+import "../styles/ConwayGol.css";
 
 const numRows = 25;
 const numCols = 25;
@@ -13,6 +14,17 @@ const GameOfLife: React.FC = () => {
   const [running, setRunning] = useState(false);
   const runningRef = useRef(running);
   runningRef.current = running;
+
+  const setRandomGrid = () => {
+    const newGrid = Array(numRows)
+      .fill(null)
+      .map(() =>
+        Array(numCols)
+          .fill(false)
+          .map(() => Math.random() > 0.7)
+      );
+    setGrid(newGrid);
+  };
 
   const runSimulation = useCallback(() => {
     if (!runningRef.current) return;
@@ -64,6 +76,7 @@ const GameOfLife: React.FC = () => {
       >
         {running ? "Stop" : "Start"}
       </button>
+      <button onClick={setRandomGrid}>Randomize</button>
       <div
         style={{
           display: "grid",

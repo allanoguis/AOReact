@@ -64,22 +64,29 @@ const GameOfLife: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <button
-        onClick={() => {
-          setRunning(!running);
-          if (!running) {
-            runningRef.current = true;
-            runSimulation();
-          }
-        }}
-      >
-        {running ? "Stop" : "Start"}
-      </button>
-      <button onClick={setRandomGrid}>Randomize</button>
+    <div className="conway-container">
+      <h3>Conway's Game of Life: </h3>
+      <div className="conwaybtns">
+        <button
+          onClick={() => {
+            setRunning(!running);
+            if (!running) {
+              runningRef.current = true;
+              runSimulation();
+            }
+          }}
+          className={running ? "stop" : "start"}
+        >
+          {running ? "Stop" : "Start"}
+        </button>
+        <button className="random" onClick={setRandomGrid}>
+          Randomize
+        </button>
+      </div>
       <div
         style={{
           display: "grid",
+          border: "2px",
           gridTemplateColumns: `repeat(${numCols}, 20px)`,
         }}
       >
@@ -107,7 +114,7 @@ const GameOfLife: React.FC = () => {
           ))
         )}
       </div>
-    </>
+    </div>
   );
 };
 

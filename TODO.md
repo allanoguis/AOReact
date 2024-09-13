@@ -43,10 +43,10 @@ Rebuilding my personal website using React.JS with some extras.
 - [x] Static Methods
 - [x] Inheritance
 - [x] Getters && Setters
-- [ ] Destructuring
-- [ ] Modules
-- [ ] ES6 Modules
-- [ ] Error Handling
+- [x] Destructuring
+- [x] Modules
+- [x] ES6 Modules
+- [x] Error Handling
 - [ ] Debugging
 - [ ] DOMs
 - [ ] DOM Navigation

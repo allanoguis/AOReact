@@ -1,42 +1,42 @@
 .conway-container {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid white;
-  padding: 3rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    padding: 3rem;
 }
 
 .conway-grid {
-  display: grid;
-  grid-template-columns: repeat(50, 20px); /* Adjust the number and size as needed */
-  gap: 1px;
-  background-color: #ccc;
-  padding: 1px;
-  border: 1px solid #999;
+    display: grid;
+    grid-template-columns: repeat(50, 20px); /* Adjust the number and size as needed */
+    gap: 1px;
+    background-color: #ccc;
+    padding: 1px;
+    border: 1px solid #999;
 }
 
 .cell {
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  transition: background-color 0.3s ease;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 .cell.alive {
-  background-color: #000;
+    background-color: #000;
 }
 
 .controls {
-  margin-top: 20px;
-  text-align: center;
+    margin-top: 20px;
+    text-align: center;
 }
 
 button {
-  margin: 0 5px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .conwaybtns{

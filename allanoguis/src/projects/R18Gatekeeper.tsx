@@ -77,7 +77,7 @@ const AgeHook: React.FC = () => {
 
   return (
     <div className="GatekeeperContainer">
-      <h3>Enter Age: {myAge}</h3>
+      <h4>Gatekeeper (R18) Age: {myAge}</h4>
       <input
         className="inputAge"
         type="number"

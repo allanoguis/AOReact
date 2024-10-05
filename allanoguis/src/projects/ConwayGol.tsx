@@ -21,7 +21,7 @@ const GameOfLife: React.FC = () => {
       .map(() =>
         Array(numCols)
           .fill(false)
-          .map(() => Math.random() > 0.1)
+          .map(() => Math.random() > 0.7)
       );
     setGrid(newGrid);
   };

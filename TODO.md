@@ -52,8 +52,8 @@ Rebuilding my personal website using React.JS with some extras.
 - [x] DOM Navigation
 - [x] DOM Manipulation
 - [x] Element Selectors
-- [ ] Event Listeners
-- [ ] Event Handlers
+- [x] Event Listeners
+- [x] Event Handlers
 - [ ] Event Objects
 - [ ] Event Propagation
 - [ ] Event Delegation
